@@ -5,7 +5,7 @@ This is a working project for myself, my family, and anyone else who has ever th
 Because making your own food shouldn't require a google deep dive.
 
 ## Version 1.0 is Live
-This phase includes the following features/capabilities:
+This version includes the following features/capabilities:
 - Look up recipes posted by all users.
 - Create an account using an email address.
 - Add and edit recipes with images and links.
@@ -20,5 +20,6 @@ This phase includes the following features/capabilities:
 ## Package Dependencies
 express, nodemon, mongoose, bcrypt, jsonwebtoken, jwt-decode, react, react-router-dom, axios, redux, materialUI
 
-[WhereIsThatRecipe](https://wheresthatrecipe.com/)
+[WheresThatRecipe](https://wheresthatrecipe.com/)
+
 ![Recipe Collection](http://g.recordit.co/ptnQBRm1HO.gif)
