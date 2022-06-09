@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles({
+export default makeStyles((theme) => ({
     media: {
         height: 0,
         paddingTop: '56.25%',
@@ -17,17 +17,17 @@ export default makeStyles({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        borderRadius: '15px',
-        height: '100%',
+        borderRadius: '5px',
+        height: '430px',
         position: 'relative',
     },
-    overlay: {
+    overlayNameTime: {
         position: 'absolute',
         top: '20px',
         left: '20px',
         color: 'white',
     },
-    overlay2: {
+    overlayEditButton: {
         position: 'absolute',
         top: '20px',
         right: '20px',
@@ -41,8 +41,17 @@ export default makeStyles({
         display: 'flex',
         justifyContent: 'space-between',
         margin: '20px',
-    },title: {
-        padding: '0 16px',
+    },
+    title: {
+        padding: '10px 16px',
+        height: '40px',
+    },
+    tagsSection: {
+        height: '40px'
+    },
+    cardAction: {
+        display: 'block',
+        textAlign: 'initial',
     },
     cardActions: {
         padding: '0 16px 8px 16px',
@@ -51,5 +60,11 @@ export default makeStyles({
     },
     smallIcons: {
         color: 'rgba(94,0,53,1)',
+        // color: 'rgba(0,92,105,1)',
     },
-});
+    [theme.breakpoints.down('xs')]: {
+        tagsSection: {
+            height: '20px',
+        }
+    },
+}));
