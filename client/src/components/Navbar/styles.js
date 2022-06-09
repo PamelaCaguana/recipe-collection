@@ -2,16 +2,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
     appBar: {
-        borderRadius: 10,
-        margin: '30px 0',
+        marginBottom: '20px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '10px 50px',
+        padding: '8px 35px',
+        paddingBottom: '50px',
+        background: 'transparent', 
       },
       brandContainer: {
         display: 'flex-end',
+        textDecoration: 'none',
       },
       image: {
         marginLeft: '15px',
@@ -19,13 +21,16 @@ export default makeStyles((theme) => ({
       heading: {
         alignItems: 'center',
         textDecoration: 'none',
-        color: 'rgba(94,0,53,1)',
+        fontFamily: 'Montserrat, sans-serif',
+        color: 'white',
+        // color: 'rgba(94,0,53,1)',
       },
       button: {
-        backgroundColor: 'rgba(149,9,82,1)',
+        backgroundColor: 'white',
+        color: 'rgba(94,0,53,1)',
         '&:hover': {
-            backgroundColor: 'rgba(94,0,53,1)',},
-        color: 'white',
+            backgroundColor: 'rgba(94,0,53,1)',
+            color: 'white',},
       },
       toolbar: {
         display: 'flex',
@@ -40,6 +45,7 @@ export default makeStyles((theme) => ({
       userName: {
         display: 'flex',
         alignItems: 'center',
+        color: 'white',
       },
       purple: {
         color: 'white',
@@ -56,7 +62,7 @@ export default makeStyles((theme) => ({
         //   paddingBottom: '10px'
         // },
         heading: {
-          fontSize: '29px',
+          fontSize: '40px',
         },
         toolbar: {
           justifyContent: 'space-around',

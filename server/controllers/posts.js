@@ -5,11 +5,20 @@ import PostMessage from '../models/postMessage.js';
 
 const router = express.Router();
 
+// get posts by page
 export const getPosts = async (req, res) => { 
+    const { page } = req.query;
+    //req.query will convert everything to strings
     try {
-        const postMessages = await PostMessage.find();
-                
-        res.status(200).json(postMessages);
+        const LIMIT = 6;
+        // don't forget this is an index
+        // the start index for every page
+        const startIndex = (Number(page)-1) * LIMIT;
+        const totalRecipes = await PostMessage.countDocuments({});
+        // id: -1 to get the newests posts first
+        const posts = await PostMessage.find().sort({ _id: -1 }).limit(LIMIT).skip(startIndex);
+        
+        res.status(200).json({ data: posts, currentPage: Number(page), numberOfPages: Math.ceil(totalRecipes / LIMIT)});
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -24,6 +33,22 @@ export const getPost = async (req, res) => {
         res.status(200).json(post);
     } catch (error) {
         res.status(404).json({ message: error.message });
+    }
+}
+
+//Query -> /posts?page=1
+//Params -> /posts/:id -> /posts/123
+export const getPostsBySearch = async (req, res) => {
+    const { searchQuery, tags } = req.query;
+    try {
+        const title = new RegExp(searchQuery, "i");
+        // 'i' ignore case, to ignore repeats
+        //$or = either or 
+        const posts = await PostMessage.find({ $or: [ { title }, { tags: { $in: tags.split(',') } } ]});
+
+        res.json({ data: posts });
+    } catch (error) {
+        res.status(404).json({ message: error.message })
     }
 }
 

@@ -36,11 +36,11 @@ const Navbar = () => {
       }, [location]);
 
     return(
-        <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className={classes.brandContainer}>
-                <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">Recipe Collection</Typography>
+        <AppBar className={classes.appBar} position="static" color="inherit" elevation={0} >
+            <Link to="/" className={classes.brandContainer}>
+                <Typography className={classes.heading} variant="h2" align="center">Recipe Collection</Typography>
                 {/* <img className={classes.image} src={berries} alt="icon" height="20" /> */}
-            </div>
+            </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
                     <div className={classes.profile}>

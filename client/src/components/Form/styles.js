@@ -8,6 +8,8 @@ export default makeStyles((theme) => ({
     },
     paper: {
         padding: theme.spacing(2),
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
     },
     form: {
         display: 'flex',
@@ -20,9 +22,9 @@ export default makeStyles((theme) => ({
     },
     buttonSubmit: {
         marginBottom: 10,
-        backgroundColor: 'rgba(149,9,82,1)',
+        backgroundColor: 'rgba(94,0,53,1)',
         '&:hover': {
-            backgroundColor: 'rgba(94,0,53,1)',},
+            backgroundColor: 'rgba(149,9,82,1)',},
         color: 'white',
     },
     hoverButtonSubmit: {
