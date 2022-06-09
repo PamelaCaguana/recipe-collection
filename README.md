@@ -13,7 +13,7 @@ This version includes the following features/capabilities:
 - Pagination to include full recipes in easy to read layout.
 - Search through recipes titles and tags.
 
-## Currently working on V1.3
+## Currently working on V1.2
 - Comment Section.
 - Layout improvements on recipe details page.
 - Add allergy options and icons.
@@ -30,4 +30,4 @@ express, nodemon, mongoose, bcrypt, jsonwebtoken, jwt-decode, react, react-route
 
 [WheresThatRecipe](https://wheresthatrecipe.com/)
 
-![Recipe Collection](http://g.recordit.co/ptnQBRm1HO.gif)
+![Recipe Collection](http://g.recordit.co/oC8JCQBpbo.gif)

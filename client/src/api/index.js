@@ -1,6 +1,11 @@
 import axios from 'axios';
 
 const API = axios.create({ baseURL: 'http://localhost:5000' });
+//our API will make different calls so we no longer need /posts
+//const url = 'http://localhost/5000/posts';
+//const API = axios.create({ baseURL: 'http://localhost:5000' });
+// const API = axios.create({ baseURL: 'https://frequentrecipes.herokuapp.com' });
+
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('profile')) {
