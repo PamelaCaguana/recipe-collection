@@ -7,7 +7,7 @@ Because making your own food shouldn't require a google deep dive.
 ## Version 1.1 is Live
 This version includes the following features/capabilities:
 - Read recipes posted by all users.
-- Create an account with an email address using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- Create an account with an email address and password using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 - Add and edit recipes with images and links.
 - Like and delete recipes.
 - Pagination to include full recipes in easy to read layout.
@@ -43,10 +43,10 @@ This version includes the following features/capabilities:
 ### Create a `.env` file in the server folder and add the following as `key = value` 
   - PORT= 5000
   - CONNECTION_URL= `your database URI`
-  - TEST_KEY= `needed for JWT`  
+  - TEST_KEY= `your JWT secret`  
 
 
-You will need to generate your own [JWT token](https://jwt.io/). You can use these [instructions](https://www.ibm.com/docs/da/order-management?topic=SSGTJF/configuration/t_GeneratingJWTToken.htm).
+You will need to generate your own [JWT secret]. You can use these [instructions](https://youtu.be/mbsmsi7l3r4?t=465) and use node to generate your own secret.
 
 ## Getting Started
 
