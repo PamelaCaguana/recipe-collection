@@ -29,12 +29,13 @@ This version includes the following features/capabilities:
 express, nodemon, mongoose, bcrypt, jsonwebtoken, jwt-decode, react, react-router-dom, axios, redux, materialUI
 
 ## Setup:
-- run ```npm i && npm start``` for both client and server side to start the app
 
 Create a `.env` file in the server folder and add the following as `key = value` 
   - PORT= 5000
   - CONNECTION_URL= `your database URI`
   - TEST_KEY= `needed for JWT`
+
+- run ```npm i && npm start``` for both client and server side to start the app
 
 [WheresThatRecipe](https://wheresthatrecipe.com/)
 
