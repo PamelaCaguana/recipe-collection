@@ -43,7 +43,10 @@ This version includes the following features/capabilities:
 ### Create a `.env` file in the server folder and add the following as `key = value` 
   - PORT= 5000
   - CONNECTION_URL= `your database URI`
-  - TEST_KEY= `needed for JWT`
+  - TEST_KEY= `needed for JWT`  
+
+
+You will need to generate your own [JWT token](https://jwt.io/). You can use these [instructions](https://www.ibm.com/docs/da/order-management?topic=SSGTJF/configuration/t_GeneratingJWTToken.htm).
 
 ## Getting Started
 
